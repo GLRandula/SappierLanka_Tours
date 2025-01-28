@@ -75,7 +75,7 @@ export default function Contact(){
 
                         <div className="content mt-7">
                             <h5 className="h5 text-lg font-semibold">Phone</h5>
-                            <p className="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                            <p className="text-slate-400 mt-3">Get in touch with us for gain a better service.</p>
                             
                             <div className="mt-5">
                                 <Link to='https://wa.me/+94776102001' className="text-red-500 font-medium">+94 77-610-2001</Link>
@@ -95,10 +95,10 @@ export default function Contact(){
 
                         <div className="content mt-7">
                             <h5 className="h5 text-lg font-semibold">Email</h5>
-                            <p className="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                            <p className="text-slate-400 mt-3">Contact Us with email</p>
                             
                             <div className="mt-5">
-                                <Link to="mailto:contact@example.com" className="text-red-500 font-medium">contact@example.com</Link>
+                                <Link to="mailto:sappierlankatours@gmail.com" className="text-red-500 font-medium">sappierlankatours@gmail.com</Link>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@ export default function Contact(){
 
                         <div className="content mt-7">
                             <h5 className="h5 text-lg font-semibold">Location</h5>
-                            <p className="text-slate-400 mt-3">C/54 Northwest Freeway, Suite 558, <br/> Houston, USA 485</p>
+                            <p className="text-slate-400 mt-3">Manavila, Walahanduwa <br/> Galle.</p>
                             
                             <div className="mt-5">
                                 <Link to="#" onClick={()=>setModal(!modal)} className="video-play-icon read-more lightbox text-red-500 font-medium">View on Google map</Link>

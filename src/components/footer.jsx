@@ -15,7 +15,7 @@ export default function Footer(){
                         <div className="py-[60px] px-0">
                             <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
                                 <div className="lg:col-span-3 md:col-span-12">
-                                    <Link to="#" className="text-[22px] focus:outline-none">
+                                    <Link to="/" className="text-[22px] focus:outline-none">
                                         <img src={logoLight} alt=""/>
                                     </Link>
                                     <p className="mt-6 text-gray-300">Explore Sri Lanka with Comfort and Care.</p>
@@ -38,14 +38,14 @@ export default function Footer(){
                                         <div className="flex mt-4">
                                             <FiMapPin className="size-4 text-red-500 me-2 mt-1"></FiMapPin>
                                             <div className="">
-                                                <h6 className="text-gray-300">C/54 Northwest Freeway, <br/> Suite 558, <br/> Houston, USA 485</h6>
+                                                <h6 className="text-gray-300">Manavila, Walahanduwa, <br/> Galle.</h6>
                                             </div>
                                         </div>
 
                                         <div className="flex mt-4">
                                             <FiMail className="size-4 text-red-500 me-2 mt-1"></FiMail>
                                             <div className="">
-                                                <Link to="mailto:contact@example.com" className="text-slate-300 hover:text-slate-400 duration-500 ease-in-out">contact@example.com</Link>
+                                                <Link to="mailto:sappierlankatours@gmail.com" className="text-slate-300 text-sm hover:text-slate-400 duration-500 ease-in-out">sappierlankatours@gmail.com</Link>
                                             </div>
                                         </div>
                         

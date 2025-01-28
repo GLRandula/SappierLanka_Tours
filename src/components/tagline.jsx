@@ -16,14 +16,14 @@ export default function Tagline(){
                             </li>
                             <li className="inline-flex items-center ms-2">
                                 <FiMapPin className="text-red-500 size-4"></FiMapPin>
-                                <span className="ms-2 text-slate-300">Houston, USA 485</span>
+                                <span className="ms-2 text-slate-300">Manavila, Walahanduwa.</span>
                             </li>
                         </ul>
 
                         <ul className="list-none">
                             <li className="inline-flex items-center">
                                 <FiMail className="text-red-500 size-4"></FiMail>
-                                <a href="mailto:contact@example.com" className="ms-2 text-slate-300 hover:text-slate-200">contact@example.com</a>
+                                <a href="mailto:sappierlankatours@gmail.com" className="ms-2 text-slate-300 hover:text-slate-200">sappierlankatours@gmail.com</a>
                             </li>
                             <li className="inline-flex items-center ms-2">
                                 <ul className="list-none space-x-3">

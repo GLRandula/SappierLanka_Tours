@@ -44,6 +44,7 @@ import subimg8_4 from '../assets/images/listing/8_4.jpg'
 import subimg9_1 from '../assets/images/listing/9.jpg'
 import subimg9_2 from '../assets/images/listing/9_2.jpg'
 import subimg9_3 from '../assets/images/listing/9_3.jpg'
+import subimg9_4 from '../assets/images/listing/9_4.jpg'
 import subimg10_1 from '../assets/images/listing/10.jpg'
 import subimg10_2 from '../assets/images/listing/10_2.jpg'
 import subimg10_3 from '../assets/images/listing/10_3.jpg'
@@ -212,7 +213,7 @@ export const packages = [
         "Traditional masks",
         "Natural wildlife experience"
       ],
-      subImages: [subimg3_1, subimg3_2, subimg3_3],
+      subImages: [subimg3_1, subimg3_2, subimg3_3, subimg3_4],
     },
     {
       id: 4,
@@ -352,7 +353,7 @@ export const packages = [
         "Wonderful Landscapes",
         "Hiking"
       ],
-      subImages: [subimg9_1, subimg9_2, subimg9_3],
+      subImages: [subimg9_1, subimg9_2, subimg9_3, subimg9_4],
     },
     {
       id: 10,
@@ -432,19 +433,19 @@ export const packages = [
 export const ClientData = [
     {
         image:client1,
-        desc:'" It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. "',
+        desc:'" Made my dream vacation a reality! Flawless planning, breathtaking experiences, and exceptional service. Highly recommended! "',
         name:'Calvin Carlo',
         possition:'Manager'
     },
     {
         image:client2,
-        desc:'"The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century."',
+        desc:'" From start to finish, everything was seamless. Guider crafted a perfect itinerary. Truly an unforgettable travel experience! "',
         name:'Christa Smith',
         possition:'Manager'
     },
     {
         image:client2,
-        desc:'"The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century."',
+        desc:'" The attention to detail and local insights were amazing. I felt cared for every step of the way. Simply outstanding! "',
         name:'Christa Smith',
         possition:'Manager'
     }
@@ -545,11 +546,11 @@ export const footerSocial = [
     },
     {
         icon:FiFacebook,
-        link:'#'
+        link:'https://www.facebook.com/share/1BrQPRZfif/'
     },
     {
         icon:FiMail,
-        link:'#'
+        link:'/contact'
     },
 ]
 
@@ -792,7 +793,7 @@ export const blogSocial = [
     },
     {
         icon:FiFacebook,
-        link:'#'
+        link:'https://www.facebook.com/share/15YZViTKg9/'
     },
     {
         icon:FiLinkedin,
