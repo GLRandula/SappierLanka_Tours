@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Tagline from "../../components/tagline";
@@ -12,8 +12,20 @@ import Footer from "../../components/footer";
 import Switcher from "../../components/switcher";
 import Whatsapp from "../../components/whatsapp";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import ModalVideo from "react-modal-video";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
+
+import about from '../../assets/images/transport.jpg'
+import map from '../../assets/images/map-plane-big.png'
+
+import bg1 from '../../assets/images/bg/1_.jpg'
+import bg2 from '../../assets/images/bg/2.jpg'
+import bg3 from '../../assets/images/bg/2_.jpg'
+import bg4 from '../../assets/images/bg/4.jpg'
 
 import { packages } from "../../data/data";
 
@@ -27,8 +39,59 @@ import {
   FiMapPin,
 } from "../../assets/icons/vander";
 
+const slides = [
+  {
+    image: bg1,
+    title: "Wander Beyond the Horizon",
+    subtitle: "Explore the Nature With Us",
+    description: "Unforgettable travel experiences with tailored adventures, seamless itineraries, and breathtaking destinations!",
+  },
+  {
+    image: bg4,
+    title: "Discover Hidden Wonders",
+    subtitle: "Adventure Awaits",
+    description: "From misty mountains to golden beaches, embark on a journey that brings you closer to nature's beauty.",
+  },
+  {
+    image: bg2,
+    title: "Embrace the Unknown",
+    subtitle: "Your Next Destination Calls",
+    description: "Step into a world of culture, history, and breathtaking landscapes curated just for you.",
+  },
+  {
+    image: bg3,
+    title: "Escape to Serenity",
+    subtitle: "Find Peace in Nature",
+    description: "Lose yourself in the tranquility of the world's most beautiful places, crafted for ultimate relaxation.",
+  }
+];
+
 export default function Index() {
   const [isOpen, setOpen] = useState(false);
+
+  const [currentImage, setCurrentImage] = useState(slides[0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => {
+        const currentIndex = slides.indexOf(prevImage);
+        const nextIndex = (currentIndex + 1) % slides.length;
+        return slides[nextIndex];
+      });
+    }, 4000); // Change every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const settings = {
+    autoplay: true,
+    autoplaySpeed: 4000,
+    infinite: true,
+    fade: true,
+    arrows: false,
+    dots: false,
+    speed: 1500,
+  };
 
   return (
     <>
@@ -38,7 +101,7 @@ export default function Index() {
         navlight={true}
         manuclass="justify-end nav-light"
       />
-      <section className="relative md:pt-72 md:pb-32 py-30 table w-full items-center bg-[url('../../assets/images/bg/2.jpg')] bg-top bg-no-repeat bg-cover">
+      {/*<section className="relative md:pt-72 md:pb-32 py-30 table w-full items-center bg-[url('../../assets/images/bg/2.jpg')] bg-top bg-no-repeat bg-cover">
         <div className="absolute inset-0 bg-slate-900/50"></div>
         <div className="container relative">
           <div className="grid md:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]">
@@ -53,7 +116,9 @@ export default function Index() {
                 Unforgettable travel experiences with tailored adventures,
                 seamless itineraries and destinations!
               </p>
-            </div>
+            </div> 
+
+            
 
             <div className="lg:col-span-4 md:col-span-5 md:text-center md:order-2 order-1">
               <Link
@@ -73,11 +138,66 @@ export default function Index() {
             />
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* <div className="container relative -mt-16 z-1">
             <Form/>
         </div> */}
+
+        {/* <div className="relative w-full h-screen overflow-hidden">
+      <Slider {...settings}>
+        {imageSlides.map((image, index) => (
+          <div key={index} className="relative w-full h-screen">
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
+              style={{
+                backgroundImage: `url(${image})`,
+                filter: "brightness(50%)",
+              }}
+            ></div>
+          </div>
+        ))}
+      </Slider>
+
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+        <h5 className="text-3xl font-dancing text-white">
+          Wander Beyond the Horizon
+        </h5>
+        <h4 className="font-bold text-white lg:leading-normal leading-normal text-4xl lg:text-6xl mb-6 mt-5">
+          Explore the Nature <br /> With Us
+        </h4>
+        <p className="text-white/70 text-xl max-w-xl">
+          Unforgettable travel experiences with tailored adventures,
+          seamless itineraries, and breathtaking destinations!
+        </p>
+      </div>
+    </div> */}
+
+    <div className="relative w-full h-screen overflow-hidden">
+      <Slider {...settings}>
+        {slides.map((slide, index) => (
+          <div key={index} className="relative w-full h-screen">
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                filter: "brightness(50%)",
+              }}
+            ></div>
+
+            {/* Content Over the Background */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+              <h5 className="text-3xl font-dancing text-white">{slide.title}</h5>
+              <h4 className="font-bold text-white lg:leading-normal leading-normal text-4xl lg:text-6xl mb-6 mt-5">
+                {slide.subtitle}
+              </h4>
+              <p className="text-white/70 text-xl max-w-xl">{slide.description}</p>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
 
       <section className="relative md:py-24 py-16 overflow-hidden">
         <div className="container lg:mt-6 mb-24">
@@ -211,6 +331,35 @@ export default function Index() {
           </div>
         </div>
 
+        <div className="container relative md:mt-24 mb-24">
+            <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-6 relative">
+                <div className="md:col-span-5">
+                    <div className="relative">
+                        <img src={about} className="mx-auto rounded-2xl shadow dark:shadow-gray-700" alt=""/>
+                    </div>
+                </div>
+
+                <div className="md:col-span-7">
+                    <div className="lg:ms-8">
+                        <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Transportation Facilities</h3>
+                        <p className="text-slate-400 max-w-xl mb-6">We are providing following transportaion facilities including prices. You can contact us for pricing details.</p>
+                        <ul className="list-disc ml-6 text-red-600 mt-2">
+                      <li><p className="text-red-600 max-w-xl mb-2">Vehical Rental</p></li>
+                      <li><p className="text-red-600 max-w-xl mb-2">Airport Drops/ Pick Up</p></li>
+                      <li><p className="text-red-600 max-w-xl mb-2">Destination Transport</p></li>
+                      <li><p className="text-red-600 max-w-xl mb-6">Schedule Public Transport</p></li>
+                  </ul>
+                        <br></br>
+                        <Link to='https://wa.me/+94776102001' className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-red-500 text-white rounded-md">Contact Us <i className="mdi mdi-chevron-right align-middle ms-0.5"></i></Link>
+                    </div>
+                </div>
+
+                <div className="absolute bottom-0 start-1/3 -z-1">
+                    <img src={map} className="lg:w-[600px] w-96" alt=""/>
+                </div>
+            </div>
+        </div>
+
         <TopDestinationOne />
 
         <div className="container relative md:mt-24 mt-16">
@@ -311,7 +460,7 @@ export default function Index() {
           </div>
         </div>
 
-        <About />
+        {/* <About /> */}
 
         <Client />
 
