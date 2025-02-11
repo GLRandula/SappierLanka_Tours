@@ -466,14 +466,6 @@ export default function Index() {
 
         <Blogs />
       </section>
-      {/* <div
-        className="fixed bottom-5 left-5 text-transparent items-end"
-        style={{ zIndex: 1000 }}
-      >
-        <div className="size-16 bg-green-500/5 text-green-500 rounded-xl text-4xl flex align-middle justify-center items-center mx-auto shadow-sm dark:shadow-gray-800">
-          <IoLogoWhatsapp />
-        </div>
-      </div> */}
         <Whatsapp />
       <Footer />
       <Switcher />

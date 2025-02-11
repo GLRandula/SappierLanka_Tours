@@ -489,22 +489,6 @@ export const blogData = [
     },
     {
         id: 3,
-        image: blog3,
-        date: '13th Sep 2024',
-        title: '🌱 Coral Growing – Breathing Life Back into the Ocean',
-        desc: 'This is required when, for example, the final text is not yet available.',
-        facts: "Coral reefs are more than just underwater landscapes—they are the foundation of marine ecosystems, providing shelter for countless species. Yet, rising ocean temperatures and environmental damage have left many reefs vulnerable. But hope isn\’t lost.Right in the heart of Colombo Port City, a bold initiative is underway:",
-        points: [
-            "💙 Coral nurseries are being planted underwater.",
-            "💙 Marine biologists & divers are working together to restore damaged reefs.",
-            "💙 Soon, these corals will grow into thriving underwater forests, bringing back marine life.",
-        ],
-        end: "And here’s the most exciting part—you can be a part of this!",
-        tag: 'Sea Diving',
-        subImages: [blog3_1, blog3_2]
-    },
-    {
-        id: 4,
         image: blog4,
         date: '17th Jan 2025',
         title: '🦁 Yala National Park – Sri Lanka’s African Safari',
@@ -519,6 +503,22 @@ export const blogData = [
         end: "🚙 Must Do: A jeep safari at sunset—watch the wilderness come alive under a glowing sky.",
         tag: 'Wild Safari',
         subImages: [blog4_1, blog4_2, blog4_3]
+    },
+    {
+        id: 4,
+        image: blog3,
+        date: '13th Sep 2024',
+        title: '🌱 Coral Growing – Breathing Life Back into the Ocean',
+        desc: 'This is required when, for example, the final text is not yet available.',
+        facts: "Coral reefs are more than just underwater landscapes—they are the foundation of marine ecosystems, providing shelter for countless species. Yet, rising ocean temperatures and environmental damage have left many reefs vulnerable. But hope isn\’t lost.Right in the heart of Colombo Port City, a bold initiative is underway:",
+        points: [
+            "💙 Coral nurseries are being planted underwater.",
+            "💙 Marine biologists & divers are working together to restore damaged reefs.",
+            "💙 Soon, these corals will grow into thriving underwater forests, bringing back marine life.",
+        ],
+        end: "And here’s the most exciting part—you can be a part of this!",
+        tag: 'Sea Diving',
+        subImages: [blog3_1, blog3_2]
     },
     {
         id: 5,
