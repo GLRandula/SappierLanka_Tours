@@ -66,6 +66,14 @@ export default function Blogs(){
         </section>
 
         <section className="relative md:py-24 py-16">
+        <div className="grid grid-cols-1 pb-8 text-center mb-10">
+            <h3 className="mb-2 md:text-3xl text-2xl md:leading-normal text-red-500 leading-normal font-semibold">
+            Inspiring Travel Stories
+            </h3>
+            <p className="text-slate-400 max-w-xl mx-auto">
+            Discover travel inspiration with our blogs! Explore hidden gems, expert tips, and captivating stories to make your journeys more exciting, seamless, and unforgettable. 🌍✨
+            </p>
+          </div>
           <div className="container relative">
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
               {blogData.map((item, index) => {
