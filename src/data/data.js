@@ -94,51 +94,61 @@ import {FiShoppingCart,FiDribbble, FiLinkedin,FiFacebook,FiInstagram,FiTwitter,F
 
 export const topDestination = [
     {
+        id: 1,
         image:listing1,
         place:'Ella',
         hotels:'Scenic Views'
     },
     {
+        id: 2,
         image:listing2,
         place:'Galle Fort',
         hotels:'Colonial Elegance'
     },
     {
+        id: 3,
         image:listing3,
         place:'Sigiriya',
         hotels:'Rock Fortress'
     },
     {
+        id: 4,
         image:listing4,
         place:'Kandy',
         hotels:'Cultural Capital'
     },
     {
+        id: 5,
         image:listing5,
         place:'Nuwara Eliya',
         hotels:'Little England'
     },
     {
+        id: 6,
         image:listing6,
         place:'Mirissa',
         hotels:'Tropical Paradise'
     },
     {
+        id: 7,
         image:listing7,
         place:'Polonnaruwa',
         hotels:'Ancient Ruins'
     },
     {
+        id: 8,
         image:listing8,
         place:'Yala',
         hotels:'National Park'
     },
     {
+        id: 9,
         image:listing9,
         place:'Sinharaja',
         hotels:'National Rain Forest'
     },
     {
+        id: 10,
         image:listing12,
         place:'Hikkaduwa',
         hotels:'Beach Side'
